@@ -1,172 +1,351 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Towhid Ahmed | AI/ML Engineer</title>
+    <meta name="description" content="Towhid Ahmed - AI/ML Engineer &amp; Generative AI Engineer Portfolio">
+    <title>Towhid Ahmed | AI/ML &amp; Generative AI Engineer</title>
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+<body class="tailwind-configured bg-gray-50">
+    <!-- NAVBAR -->
+    <nav class="bg-[#0a7c6b] text-white sticky top-0 z-50 shadow-2xl">
+        <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 bg-white text-[#0a7c6b] rounded-3xl flex items-center justify-center font-bold text-3xl rotate-12 shadow-inner">TA</div>
+                <h1 class="logo-font text-3xl tracking-[-1px]">Towhid Ahmed</h1>
+            </div>
 
-<body>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-x-10 text-lg font-medium">
+                <a href="#home" onclick="smoothScrollTo('home')" class="nav-link">Home</a>
+                <a href="#about" onclick="smoothScrollTo('about')" class="nav-link">About</a>
+                <a href="#skills" onclick="smoothScrollTo('skills')" class="nav-link">Skills</a>
+                <a href="#services" onclick="smoothScrollTo('services')" class="nav-link">Services</a>
+                <a href="#experience" onclick="smoothScrollTo('experience')" class="nav-link">Experience</a>
+                <a href="#projects" onclick="smoothScrollTo('projects')" class="nav-link">Projects</a>
+                <a href="#faq" onclick="smoothScrollTo('faq')" class="nav-link">FAQ</a>
+                <a href="#contact" onclick="smoothScrollTo('contact')" class="nav-link">Contact</a>
+            </div>
 
-<!-- Navbar -->
-<nav>
-    <h2>Towhid</h2>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+            <div class="flex items-center gap-x-4">
+                <a onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                   class="hidden sm:flex items-center gap-x-3 bg-white text-[#0a7c6b] hover:bg-white/90 font-semibold px-7 py-3.5 rounded-3xl text-base shadow-inner">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Let's Connect
+                </a>
 
-<!-- Hero Section -->
-<section class="hero">
-    <h1>Hi, I'm Towhid Ahmed 👋</h1>
-    <p>AI/ML Engineer | NLP & GenAI Developer</p>
-    <a href="#projects" class="btn">View Projects</a>
-</section>
+                <!-- Mobile Hamburger -->
+                <button onclick="toggleMobileMenu()" class="md:hidden w-12 h-12 flex items-center justify-center text-3xl hover:bg-white/10 rounded-3xl">
+                    <i id="hamburger-icon" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
 
-<!-- About -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am an aspiring AI/ML Engineer passionate about building end-to-end machine learning and generative AI systems.
-    </p>
-</section>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-8 pb-8 bg-[#0a7c6b]">
+            <div class="flex flex-col gap-y-6 text-lg pt-4 font-medium">
+                <a href="#home" onclick="toggleMobileMenu();smoothScrollTo('home')" class="py-2">Home</a>
+                <a href="#about" onclick="toggleMobileMenu();smoothScrollTo('about')" class="py-2">About</a>
+                <a href="#skills" onclick="toggleMobileMenu();smoothScrollTo('skills')" class="py-2">Skills</a>
+                <a href="#services" onclick="toggleMobileMenu();smoothScrollTo('services')" class="py-2">Services</a>
+                <a href="#experience" onclick="toggleMobileMenu();smoothScrollTo('experience')" class="py-2">Experience</a>
+                <a href="#projects" onclick="toggleMobileMenu();smoothScrollTo('projects')" class="py-2">Projects</a>
+                <a href="#faq" onclick="toggleMobileMenu();smoothScrollTo('faq')" class="py-2">FAQ</a>
+                <a href="#contact" onclick="toggleMobileMenu();smoothScrollTo('contact')" class="py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- Skills -->
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <span>Python</span>
-        <span>Java</span>
-        <span>Machine Learning</span>
-        <span>Deep Learning</span>
-        <span>NLP</span>
-        <span>GenAI</span>
+    <!-- HERO / HOME SECTION -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-12 gap-16 items-center">
+            <!-- Left: Profile Image -->
+            <div class="md:col-span-5 flex justify-center md:justify-end">
+                <div class="relative circular-glow">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#0a7c6b]/30 to-transparent rounded-[4rem] blur-3xl scale-110"></div>
+                    <div class="w-80 h-80 md:w-[420px] md:h-[420px] rounded-[4rem] bg-[#0a7c6b] p-4 shadow-2xl glow overflow-hidden">
+                        <div class="w-full h-full rounded-3xl overflow-hidden border-8 border-white/90">
+                            <img src="towhid_Social_Media.JPG" 
+                                 alt="Towhid Ahmed - AI/ML Engineer"
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-white text-[#0a7c6b] text-sm font-bold px-6 py-3 rounded-3xl shadow-xl flex items-center gap-x-2">
+                        <i class="fa-solid fa-rocket text-xl"></i>
+                        OPEN TO REMOTE
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="md:col-span-7 text-center md:text-left">
+                <div class="inline-flex items-center gap-x-3 bg-white shadow-md text-[#0a7c6b] text-lg font-semibold px-8 py-3 rounded-3xl mb-8">
+                    <div class="w-3 h-3 bg-[#0a7c6b] rounded-full animate-pulse"></div>
+                    HELLO, MYSELF
+                </div>
+                
+                <h1 class="text-7xl md:text-8xl font-bold tracking-tighter leading-none text-gray-900 logo-font">
+                    Towhid Ahmed
+                </h1>
+                
+                <div class="flex items-baseline gap-x-4 mt-4">
+                    <h2 id="typing-text" class="text-5xl md:text-6xl font-semibold text-[#0a7c6b] logo-font">And I'm an AI/ML Engineer</h2>
+                    <span id="cursor" class="typing-cursor text-6xl text-[#0a7c6b]">|</span>
+                </div>
+                
+                <p class="mt-6 text-xl text-gray-600 max-w-xl mx-auto md:mx-0">
+                    Machine Learning • NLP • Generative AI • Python • Strong in DSA (Java) • Open to Remote Opportunities
+                </p>
+                
+                <!-- Social Icons -->
+                <div class="flex justify-center md:justify-start gap-x-6 mt-12">
+                    <a href="https://www.linkedin.com/in/towhid-ahmed-5ba096354/" target="_blank" class="social-icon w-14 h-14 bg-white text-[#0a7c6b] border-2 border-[#0a7c6b] rounded-3xl flex items-center justify-center text-3xl shadow-md">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/TowhidAhmedd" target="_blank" class="social-icon w-14 h-14 bg-white text-[#0a7c6b] border-2 border-[#0a7c6b] rounded-3xl flex items-center justify-center text-3xl shadow-md">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://x.com/towhid744" target="_blank" class="social-icon w-14 h-14 bg-white text-[#0a7c6b] border-2 border-[#0a7c6b] rounded-3xl flex items-center justify-center text-3xl shadow-md">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+                
+                <!-- Download CV -->
+                <div class="mt-12 flex justify-center md:justify-start">
+                    <button onclick="downloadCV()" 
+                            class="group relative flex items-center gap-x-4 bg-[#0a7c6b] hover:bg-[#0a7c6b]/90 text-white text-2xl font-semibold px-12 py-6 rounded-3xl shadow-2xl overflow-hidden">
+                        <span class="relative z-10">Download CV</span>
+                        <i class="fa-solid fa-download relative z-10 group-active:rotate-45"></i>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 translate-x-[-150%] group-hover:translate-x-[300%] transition-transform duration-700"></div>
+                    </button>
+                </div>
+                
+                <div class="mt-8 flex items-center justify-center md:justify-start gap-x-8 text-sm text-gray-500">
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-emerald-500"></i> CTG, Bangladesh</div>
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-emerald-500"></i> 400+ DSA Solved</div>
+                    <div class="flex items-center gap-x-2"><i class="fa-solid fa-check text-emerald-500"></i> Open to Remote</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-5">
+                    <span class="uppercase tracking-[3px] font-medium text-[#0a7c6b] text-sm">MY JOURNEY</span>
+                    <h2 class="section-header text-5xl font-bold text-gray-900 mt-3">Building intelligent systems that solve real problems</h2>
+                </div>
+                <div class="md:col-span-7 prose text-lg text-gray-600 max-w-none">
+                    <p>I am an aspiring AI/ML Engineer with a strong interest in Machine Learning, Deep Learning, Natural Language Processing (NLP), and Generative AI. I have been actively building hands-on projects using Python and Scikit-learn, focusing on solving real-world problems through data-driven approaches.</p>
+                    <p class="mt-6">My work includes developing machine learning systems such as recommendation engines, NLP-based chatbots, and classification models. I am also exploring Generative AI techniques and MLOps concepts to understand how modern AI systems are built and deployed in production environments.</p>
+                    <p class="mt-6">I have solved 400+ Data Structures and Algorithms problems, which has strengthened my problem-solving ability and programming fundamentals. I also have a solid foundation in Python and core computer science concepts.</p>
+                    <p class="mt-6">My goal is to become a production-ready AI engineer and contribute to building scalable, intelligent, and impactful AI solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-24 bg-gray-50">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="px-6 py-2 bg-[#0a7c6b] text-white font-bold rounded-3xl text-sm">MY TOOLKIT</span>
+                <h2 class="section-header text-5xl font-bold text-gray-900 mt-6">Skills &amp; Technologies</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="skill-card bg-white rounded-3xl p-8 text-center hover:shadow-2xl">Front-end: React, HTML, CSS &amp; JavaScript, Streamlit</div>
+                <div class="skill-card bg-white rounded-3xl p-8 text-center hover:shadow-2xl">Backend: Flask, FastAPI</div>
+                <div class="skill-card bg-white rounded-3xl p-8 text-center hover:shadow-2xl">Database &amp; Auth: JWT / OAuth2, PostgreSQL / MySQL</div>
+                <div class="skill-card bg-white rounded-3xl p-8 text-center hover:shadow-2xl">AI/ML: Machine Learning, Deep Learning, NLP</div>
+                <div class="skill-card bg-white rounded-3xl p-8 text-center hover:shadow-2xl">Generative AI (GenAI), LLM, RAG</div>
+                <div class="skill-card bg-white rounded-3xl p-8 text-center hover:shadow-2xl">MLOps &amp; Deployment: MLflow, DVC, Docker, AWS, CI/CD, Render/Railway</div>
+                <div class="skill-card bg-white rounded-3xl p-8 text-center hover:shadow-2xl">Software Engineering: 400+ DSA, OOP, System Design</div>
+                <div class="skill-card bg-white rounded-3xl p-8 text-center hover:shadow-2xl">Tools: TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Git, GitHub</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="px-6 py-2 bg-[#0a7c6b] text-white font-bold rounded-3xl text-sm">WHAT I OFFER</span>
+                <h2 class="section-header text-5xl font-bold text-gray-900 mt-6">End-to-End AI Solutions</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card">Data Analysis &amp; Preprocessing</div>
+                <div class="service-card">Machine Learning Development</div>
+                <div class="service-card">NLP &amp; GenAI Applications</div>
+                <div class="service-card">RAG-based AI Systems</div>
+                <div class="service-card">Model Deployment &amp; APIs</div>
+                <div class="service-card">End-to-End AI Solutions</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-24 bg-gray-50">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="px-6 py-2 bg-[#0a7c6b] text-white font-bold rounded-3xl text-sm">PROJECT-BASED EXPERIENCE</span>
+                <h2 class="section-header text-5xl font-bold text-gray-900 mt-6">AI/ML Engineer (Self-Driven)</h2>
+            </div>
+            <div class="prose max-w-3xl mx-auto text-lg text-gray-600">
+                <p>Developed end-to-end machine learning systems including Spam Detection and Recommendation Systems using Python, Scikit-learn, and NLP techniques.</p>
+                <p class="mt-6">Built NLP-based applications for text classification and preprocessing (tokenization, stopword removal, feature extraction).</p>
+                <p class="mt-6">Designed and implemented machine learning pipelines including data preprocessing, feature engineering, model training, and evaluation.</p>
+                <p class="mt-6">Applied core algorithms such as Logistic Regression, Naive Bayes, and collaborative filtering for real-world use cases.</p>
+                <p class="mt-6">Worked with structured datasets using Pandas and NumPy for data cleaning, transformation, and analysis.</p>
+                <p class="mt-6">Developed problem-solving skills by solving 400+ Data Structures and Algorithms problems, improving efficiency and coding ability.</p>
+                <p class="mt-6">Explored Generative AI concepts including LLM-based applications and prompt engineering.</p>
+                <p class="mt-6">Built and tested models with a focus on performance metrics such as accuracy, precision, recall, and F1-score.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 relative" style="background: linear-gradient(rgba(10, 124, 107, 0.85), rgba(10, 124, 107, 0.85)), url('towhid_ai.jpg') center/cover no-repeat;">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center mb-16 text-white">
+                <span class="px-6 py-2 bg-white/20 backdrop-blur-md text-white font-bold rounded-3xl text-sm">FEATURED WORK</span>
+                <h2 class="text-5xl font-bold tracking-tighter mt-6">Real-World AI Projects</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="px-6 py-2 bg-[#0a7c6b] text-white font-bold rounded-3xl text-sm">GOT QUESTIONS?</span>
+                <h2 class="section-header text-5xl font-bold text-gray-900 mt-6">Frequently Asked Questions</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4" id="faq-container">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-[#0a7c6b] text-white">
+        <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-12 gap-16">
+            <div class="md:col-span-5">
+                <h2 class="text-6xl font-bold logo-font tracking-tighter">Let's build something intelligent together</h2>
+                <p class="mt-8 text-2xl opacity-80">I'm actively looking for remote AI/ML opportunities and exciting collaborations.</p>
+                
+                <div class="mt-16 space-y-8">
+                    <a href="https://www.linkedin.com/in/towhid-ahmed-5ba096354/" target="_blank" class="flex items-center gap-x-6 group">
+                        <i class="fa-brands fa-linkedin text-4xl"></i>
+                        <div>
+                            <div class="text-xl font-medium">LinkedIn</div>
+                            <div class="opacity-70">Connect with me professionally</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/TowhidAhmedd" target="_blank" class="flex items-center gap-x-6 group">
+                        <i class="fa-brands fa-github text-4xl"></i>
+                        <div>
+                            <div class="text-xl font-medium">GitHub</div>
+                            <div class="opacity-70">See all my projects</div>
+                        </div>
+                    </a>
+                    <a href="https://x.com/towhid744" target="_blank" class="flex items-center gap-x-6 group">
+                        <i class="fa-brands fa-x-twitter text-4xl"></i>
+                        <div>
+                            <div class="text-xl font-medium">Twitter / X</div>
+                            <div class="opacity-70">@towhid744</div>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-x-6">
+                        <i class="fa-solid fa-envelope text-4xl"></i>
+                        <div>
+                            <div class="text-xl font-medium">mdt169068@gmail.com</div>
+                            <div class="opacity-70">Drop me an email</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-x-6">
+                        <i class="fa-solid fa-phone text-4xl"></i>
+                        <div>
+                            <div class="text-xl font-medium">+880 1871 834635</div>
+                            <div class="opacity-70">Bangladesh (GMT+6)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-7">
+                <form id="contact-form" onsubmit="handleSubmit(event)" class="bg-white/10 backdrop-blur-3xl rounded-3xl p-10 border border-white/30">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full bg-white/10 border border-white/30 focus:border-white rounded-3xl px-7 py-6 text-white placeholder:text-white/60 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-2">Email Address</label>
+                            <input type="email" id="email" required class="w-full bg-white/10 border border-white/30 focus:border-white rounded-3xl px-7 py-6 text-white placeholder:text-white/60 outline-none">
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <label class="block text-sm mb-2">Message</label>
+                        <textarea id="message" rows="6" required placeholder="Tell me about your next AI project..." class="w-full bg-white/10 border border-white/30 focus:border-white rounded-3xl px-7 py-6 text-white placeholder:text-white/60 outline-none resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="mt-10 w-full bg-white text-[#0a7c6b] font-bold text-2xl py-7 rounded-3xl flex items-center justify-center gap-x-4 hover:scale-105">SEND MESSAGE <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-screen-2xl mx-auto px-8 text-center">
+            <p class="text-gray-400">© 2026 Towhid Ahmed • Made with ❤️ for AI innovation</p>
+        </div>
+    </footer>
+
+    <!-- PROJECT MODAL -->
+    <div id="project-modal" onclick="if(event.target===this) closeModal()" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
+        <div onclick="event.stopImmediatePropagation()" class="bg-white rounded-3xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-auto">
+            <div class="p-8" id="modal-content">
+                <!-- JS injected -->
+            </div>
+        </div>
     </div>
-</section>
 
-<!-- Projects -->
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project-card">
-        <h3>Spam Detection System</h3>
-        <p>ML-based SMS spam classifier using NLP.</p>
+    <!-- FLOATING QUICK CONTACT BUTTONS -->
+    <div class="fixed bottom-8 right-8 flex flex-col gap-4 z-[999]">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/8801871834635" target="_blank"
+           class="floating-btn w-16 h-16 bg-[#25D366] text-white rounded-3xl flex items-center justify-center text-4xl shadow-2xl hover:scale-110">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/towhid-ahmed-5ba096354/" target="_blank"
+           class="floating-btn w-16 h-16 bg-[#0A66C2] text-white rounded-3xl flex items-center justify-center text-4xl shadow-2xl hover:scale-110">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
     </div>
 
-    <div class="project-card">
-        <h3>Movie Recommendation</h3>
-        <p>Recommendation system using collaborative filtering.</p>
-    </div>
-
-</section>
-
-<!-- Contact -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: mdt169038@email.com</p>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>© 2026 Towhid Ahmed</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 
 
-
-
-=======
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Towhid Ahmed | AI/ML Engineer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- Navbar -->
-<nav>
-    <h2>Towhid</h2>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero">
-    <h1>Hi, I'm Towhid Ahmed 👋</h1>
-    <p>AI/ML Engineer | NLP & GenAI Developer</p>
-    <a href="#projects" class="btn">View Projects</a>
-</section>
-
-<!-- About -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am an aspiring AI/ML Engineer passionate about building end-to-end machine learning and generative AI systems.
-    </p>
-</section>
-
-<!-- Skills -->
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <span>Python</span>
-        <span>Java</span>
-        <span>Machine Learning</span>
-        <span>Deep Learning</span>
-        <span>NLP</span>
-        <span>GenAI</span>
-    </div>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project-card">
-        <h3>Spam Detection System</h3>
-        <p>ML-based SMS spam classifier using NLP.</p>
-    </div>
-
-    <div class="project-card">
-        <h3>Movie Recommendation</h3>
-        <p>Recommendation system using collaborative filtering.</p>
-    </div>
-
-</section>
-
-<!-- Contact -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: mdt609038@email.com</p>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>2026 Towhid Ahmed</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
 
 

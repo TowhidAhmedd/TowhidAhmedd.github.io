@@ -1,73 +1,80 @@
 
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
+
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root { --teal: #0a7c6b; }
+
+* { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, transform; transition-duration: 150ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+
+.tailwind-configured { font-family: 'Inter', system_ui, sans-serif; }
+.logo-font { font-family: 'Space Grotesk', sans-serif; }
+
+.hero-bg {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.nav-link {
+    position: relative;
+}
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background-color: #fff;
+    border-radius: 9999px;
+}
+.nav-link:hover:after { width: 100%; }
+
+.circular-glow { animation: float 6s ease-in-out infinite; }
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+.glow { filter: drop-shadow(0 0 60px rgb(10 124 107 / 0.4)); }
+
+.section-header {
+    position: relative;
+}
+.section-header:after {
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 4px;
+    background: linear-gradient(to right, #0a7c6b, #14b8a6);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 9999px;
+}
+
+.typing-cursor { animation: blink 0.8s step-end infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.social-icon:hover {
+    transform: scale(1.2) rotate(12deg);
+    background-color: #0a7c6b;
+    color: white !important;
+}
+
+.skill-card, .service-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skill-card:hover, .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgb(10 124 107 / 0.15);
+    background-color: #0a7c6b;
     color: white;
 }
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 50px;
-    background: #020617;
+.floating-btn {
+    box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.3);
 }
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.btn {
-    padding: 10px 20px;
-    background: #3b82f6;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Sections */
-section {
-    padding: 60px 50px;
-}
-
-/* Skills */
-.skills-container span {
-    background: #1e293b;
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-/* Projects */
-.project-card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-}
+.floating-btn:hover { transform: scale(1.15); }
 
 
 
@@ -75,74 +82,8 @@ footer {
 
 
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-}
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 50px;
-    background: #020617;
-}
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.btn {
-    padding: 10px 20px;
-    background: #3b82f6;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Sections */
-section {
-    padding: 60px 50px;
-}
-
-/* Skills */
-.skills-container span {
-    background: #1e293b;
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-/* Projects */
-.project-card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-}
 
 
 
