@@ -204,21 +204,79 @@ function toggleFAQ(el) {
     icon.classList.toggle('fa-chevron-up');
 }
 
-// Form handler
+
+
+// Form handler - Backend message send to your email (replace ONLY this function)
 function handleSubmit(e) {
     e.preventDefault();
+
     const btn = e.target.querySelector('button');
     const original = btn.innerHTML;
+
+    // Show sending state
     btn.innerHTML = `SENDING <span class="animate-spin inline-block ml-2">⟳</span>`;
-    setTimeout(() => {
-        btn.innerHTML = `✅ MESSAGE SENT!`;
-        setTimeout(() => {
-            e.target.reset();
-            btn.innerHTML = original;
-            alert("Thank you! I'll reply within 24 hours.");
-        }, 1800);
-    }, 1400);
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Data for email
+    const formData = {
+        name: name,
+        email: email,
+        message: message,
+        _subject: `New Portfolio Message from ${name}`,
+        _replyto: email,
+        _captcha: "false"
+    };
+
+    // === BACKEND SEND (Formsubmit) ===
+    fetch('https://formsubmit.co/ajax/mdt169068@gmail.com', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success === true || data.success === "true") {
+            btn.innerHTML = `✅ MESSAGE SENT!`;
+            setTimeout(() => {
+                e.target.reset();
+                btn.innerHTML = original;
+                alert("Thank you! I'll reply within 24 hours.");
+            }, 1800);
+        } else {
+            throw new Error('Submission failed');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        btn.innerHTML = `❌ ERROR - TRY AGAIN`;
+        setTimeout(() => { btn.innerHTML = original; }, 2500);
+        alert("Something went wrong. Please email me directly at mdt169068@gmail.com Or WhatsApp");
+    });
 }
+
+
+
+// function handleSubmit(e) {
+//     e.preventDefault();
+//     const btn = e.target.querySelector('button');
+//     const original = btn.innerHTML;
+//     btn.innerHTML = `SENDING <span class="animate-spin inline-block ml-2">⟳</span>`;
+//     setTimeout(() => {
+//         btn.innerHTML = `✅ MESSAGE SENT!`;
+//         setTimeout(() => {
+//             e.target.reset();
+//             btn.innerHTML = original;
+//             alert("Thank you! I'll reply within 24 hours.");
+//         }, 1800);
+//     }, 1400);
+// }
 
 // Initialize everything
 window.onload = () => {
@@ -228,13 +286,3 @@ window.onload = () => {
     renderFAQ();
     console.log('%c✅ Towhid Ahmed Portfolio ready! Built as Senior Frontend Engineer', 'background:#0a7c6b;color:#fff;padding:2px 6px;border-radius:9999px');
 };
-
-
-
-
-
-
-
-
-
-
