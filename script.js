@@ -262,21 +262,8 @@ function handleSubmit(e) {
 }
 
 
+// here put 
 
-// function handleSubmit(e) {
-//     e.preventDefault();
-//     const btn = e.target.querySelector('button');
-//     const original = btn.innerHTML;
-//     btn.innerHTML = `SENDING <span class="animate-spin inline-block ml-2">⟳</span>`;
-//     setTimeout(() => {
-//         btn.innerHTML = `✅ MESSAGE SENT!`;
-//         setTimeout(() => {
-//             e.target.reset();
-//             btn.innerHTML = original;
-//             alert("Thank you! I'll reply within 24 hours.");
-//         }, 1800);
-//     }, 1400);
-// }
 
 // Initialize everything
 window.onload = () => {
