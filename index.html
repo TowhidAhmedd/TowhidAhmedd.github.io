@@ -1436,6 +1436,7 @@ function initObserver() {
 // }
 
 // ===== EMAIL FORM =====
+// ===== EMAIL FORM =====
 function sendEmail() {
   const name = document.getElementById('cName').value;
   const email = document.getElementById('cEmail').value;
@@ -1446,22 +1447,14 @@ function sendEmail() {
     return;
   }
 
-  try {
-    window.open(
-      'mailto:mdt169068@gmail.com?subject=Portfolio Contact from ' +
-        encodeURIComponent(name) +
-        '&body=' +
-        encodeURIComponent(
-          'From: ' + name + ' (' + email + ')\n\n' + msg
-        )
-    );
-  } catch (error) {
-    alert(
-      '❌ Message failed to send.\n\n' +
-      'Email: mdt169068@gmail.com\n' +
-      'Or WhatsApp'
-    );
-  }
+  // Show success / info message instead of opening mail window
+  alert(
+    "❌ Message failed to send.\n\n" +
+    "You can contact me directly:\n" +
+    "📧 Email: mdt169068@gmail.com\n" +
+    "📱 WhatsApp: Available\n\n" +
+    "I will respond soon."
+  );
 }
   
   
