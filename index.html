@@ -490,7 +490,7 @@ a{color:inherit}
             <li>Implementing <strong>LLMOps workflows</strong>, observability via LangSmith, CI/CD automation, and Docker containerization for production deployment.</li>
             <li>Independently architecting, building, testing, and deploying <strong>7+ production AI systems</strong> from concept to live deployment.</li> -->
 
-            <li>Building production-grade <strong>Towhid</strong>Generative AI applications for real-world use cases with focus on LLM systems, multi-agent architectures, and RAG pipelines.</li>
+            <li>Building production-grade Towhid Generative AI applications for real-world use cases with focus on LLM systems, multi-agent architectures, and RAG pipelines.</li>
             <li>Designing and shipping scalable FastAPI backends, advanced retrieval systems, and end-to-end AI workflows using LangGraph and LangChain.</li>
             <li>Implementing LLMOps workflows, observability via LangSmith, CI/CD automation, and Docker containerization for production deployment.</li>
             <li>Independently architecting, building, testing, and deploying 7+ production AI systems from concept to live deployment.</li> 
@@ -578,10 +578,10 @@ a{color:inherit}
         <div class="pbody">
           <div class="p-tech"><span class="ttag">Python</span><span class="ttag">LangGraph</span><span class="ttag">FastAPI</span><span class="ttag">Pinecone</span><span class="ttag">LangSmith</span><span class="ttag">Docker</span><span class="ttag">Render</span></div>
           <ul class="p-bullets">
-            <li>Architected a <strong>4-agent LangGraph workflow</strong> (Planner → Retrieval → Search → Synthesizer) with a production FastAPI backend (<code>/chat</code>, <code>/upload</code>, <code>/health</code>, <code>/metrics</code>) supporting async-safe execution for reliable cloud deployment.</li>
-            <li>Built an end-to-end <strong>RAG pipeline</strong>: document ingestion (PDF/TXT/Markdown) → chunking → Pinecone vector retrieval → citation synthesis, integrated with Tavily + DuckDuckGo for grounded, up-to-date responses.</li>
-            <li>Added <strong>production observability</strong>: LangSmith tracing, structured logging, and in-process latency/error metrics for debugging and workflow evaluation.</li>
-            <li>Deployed via <strong>Docker + Render Blueprint</strong> with health checks and optimizations suitable for free-tier, remote-accessible hosting.</li>
+            <li>Architected a 4-agent LangGraph workflow (Planner → Retrieval → Search → Synthesizer) with a production FastAPI backend (<code>/chat</code>, <code>/upload</code>, <code>/health</code>, <code>/metrics</code>) supporting async-safe execution for reliable cloud deployment.</li>
+            <li>Built an end-to-end RAG pipeline: document ingestion (PDF/TXT/Markdown) → chunking → Pinecone vector retrieval → citation synthesis, integrated with Tavily + DuckDuckGo for grounded, up-to-date responses.</li>
+            <li>Added production observability: LangSmith tracing, structured logging, and in-process latency/error metrics for debugging and workflow evaluation.</li>
+            <li>Deployed via Docker + Render Blueprint with health checks and optimizations suitable for free-tier, remote-accessible hosting.</li>
           </ul>
           <div class="p-links">
             <a class="plink gh" href="https://github.com/TowhidAhmedd/multi-agent-AI-Orchestrator/tree/main" target="_blank" rel="noopener">
@@ -605,9 +605,9 @@ a{color:inherit}
         <div class="pbody">
           <div class="p-tech"><span class="ttag">FastAPI</span><span class="ttag">Streamlit</span><span class="ttag">Pinecone</span><span class="ttag">Groq</span><span class="ttag">Faster-Whisper</span><span class="ttag">LangSmith</span><span class="ttag">Docker</span></div>
           <ul class="p-bullets">
-            <li>Architected production-grade <strong>multimodal RAG</strong> (PDF, audio, video) with Faster-Whisper transcription and semantic chunking; implemented <strong>two-stage retrieval</strong> (Pinecone + Cross-Encoder re-ranking), reducing latency by <strong>60%</strong> and improving relevance scores by <strong>25%</strong>.</li>
-            <li>Built async FastAPI backend with Groq LLM integration (3 model options), TTL-based query caching, and structured error handling; achieved <strong>&lt;2s P95 latency</strong> on cached queries with <strong>100% test pass rate</strong> (76 unit tests).</li>
-            <li>Deployed full-stack on Render with <strong>Docker containerization</strong>, automated CI/CD via GitHub, and LangSmith observability for production monitoring.</li>
+            <li>Architected production-grade multimodal RAG (PDF, audio, video) with Faster-Whisper transcription and semantic chunking; implemented two-stage retrieval (Pinecone + Cross-Encoder re-ranking), reducing latency by 60% and improving relevance scores by 25%.</li>
+            <li>Built async FastAPI backend with Groq LLM integration (3 model options), TTL-based query caching, and structured error handling; achieved &lt;2s P95 latency on cached queries with 100% test pass rate (76 unit tests).</li>
+            <li>Deployed full-stack on Render with Docker containerization, automated CI/CD via GitHub, and LangSmith observability for production monitoring.</li>
           </ul>
           <div class="p-links">
             <a class="plink gh" href="https://github.com/TowhidAhmedd/Multimodel-Rag-With-LLMOps/tree/main" target="_blank" rel="noopener">
@@ -627,10 +627,10 @@ a{color:inherit}
         <div class="pbody">
           <div class="p-tech"><span class="ttag">LangGraph</span><span class="ttag">Pinecone</span><span class="ttag">LLM Guardrails</span><span class="ttag">Tavily</span><span class="ttag">Streamlit</span><span class="ttag">JWT</span><span class="ttag">Docker</span></div>
           <ul class="p-bullets">
-            <li>Architected production-grade medical education AI with a <strong>4-agent LangGraph workflow</strong> (Router → Safety → Retrieval → Answer) and automatic fallback between WEB_ONLY, DOC_ONLY, and HYBRID search modes.</li>
+            <li>Architected production-grade medical education AI with a 4-agent LangGraph workflow (Router → Safety → Retrieval → Answer) and automatic fallback between WEB_ONLY, DOC_ONLY, and HYBRID search modes.</li>
             <li>Implemented RAG pipeline: PDF/DOCX/TXT ingestion → BAAI/bge embeddings → Pinecone retrieval → FlashRank re-ranking → page-level citations with domain whitelist (NIH, CDC, WHO, Mayo Clinic).</li>
-            <li>Engineered an <strong>industry-leading 4-layer medical safety system</strong>: (1) regex input filter, (2) LLM safety agent, (3) retrieval threshold guard, (4) output regex filter — blocking diagnosis, dosage, and injection attacks.</li>
-            <li>Built secure FastAPI backend with <strong>JWT auth</strong>, API key validation, SlowAPI rate limiting, Pydantic v2 validation, and multipart file enforcement.</li>
+            <li>Engineered an industry-leading 4-layer medical safety system: (1) regex input filter, (2) LLM safety agent, (3) retrieval threshold guard, (4) output regex filter — blocking diagnosis, dosage, and injection attacks.</li>
+            <li>Built secure FastAPI backend with JWT auth, API key validation, SlowAPI rate limiting, Pydantic v2 validation, and multipart file enforcement.</li>
           </ul>
           <div class="p-links">
             <a class="plink gh" href="https://github.com/TowhidAhmedd/Clinical-AI/tree/main" target="_blank" rel="noopener">
@@ -650,9 +650,9 @@ a{color:inherit}
         <div class="pbody">
           <div class="p-tech"><span class="ttag">Python</span><span class="ttag">LangChain</span><span class="ttag">Weaviate</span><span class="ttag">LLM APIs</span><span class="ttag">Streamlit</span></div>
           <ul class="p-bullets">
-            <li>Designed an LLM-based retrieval system and <strong>AI research assistant</strong> for semantic document search and QA over ML research papers.</li>
-            <li>Built an end-to-end RAG pipeline covering PDF ingestion, intelligent chunking, embedding generation, <strong>Weaviate vector search</strong>, and LLM-based response generation.</li>
-            <li>Designed a modular architecture separating ingestion, retrieval, LLM orchestration, and UI layers — delivering context-grounded responses that <strong>reduce hallucinations</strong>.</li>
+            <li>Designed an LLM-based retrieval system and AI research assistant for semantic document search and QA over ML research papers.</li>
+            <li>Built an end-to-end RAG pipeline covering PDF ingestion, intelligent chunking, embedding generation, Weaviate vector search, and LLM-based response generation.</li>
+            <li>Designed a modular architecture separating ingestion, retrieval, LLM orchestration, and UI layers — delivering context-grounded responses that reduce hallucinations.</li>
           </ul>
           <div class="p-links">
             <a class="plink gh" href="https://github.com/TowhidAhmedd/Advanced_Rag_ML_Research_Assistant/tree/main" target="_blank" rel="noopener">
@@ -672,10 +672,10 @@ a{color:inherit}
         <div class="pbody">
           <div class="p-tech"><span class="ttag">LangGraph</span><span class="ttag">Neo4j</span><span class="ttag">Pinecone</span><span class="ttag">Groq</span><span class="ttag">Streamlit</span><span class="ttag">Docker</span></div>
           <ul class="p-bullets">
-            <li>Architected an <strong>8-node LangGraph agent graph</strong> with conditional routing, retry loops, and HITL checkpoints that autonomously plans, researches, retrieves, executes, and self-verifies complex multi-step goals.</li>
-            <li>Built a <strong>hybrid RAG pipeline</strong> combining Pinecone semantic vector search with Neo4j graph traversal — extracting entities/relationships via LLM and fusing both retrieval paths for relationship-aware intelligence.</li>
-            <li>Implemented a <strong>Verifier Agent</strong> scoring answers on accuracy, completeness, relevance, and clarity; detects hallucinations by comparing claims against grounding context and triggers automated retry loops.</li>
-            <li>Shipped production infrastructure with multi-stage Docker, Docker Compose, LangSmith observability, multi-provider LLM support, and <strong>93 passing tests</strong>.</li>
+            <li>Architected an 8-node LangGraph agent graph with conditional routing, retry loops, and HITL checkpoints that autonomously plans, researches, retrieves, executes, and self-verifies complex multi-step goals.</li>
+            <li>Built a hybrid RAG pipeline combining Pinecone semantic vector search with Neo4j graph traversal — extracting entities/relationships via LLM and fusing both retrieval paths for relationship-aware intelligence.</li>
+            <li>Implemented a Verifier Agent scoring answers on accuracy, completeness, relevance, and clarity; detects hallucinations by comparing claims against grounding context and triggers automated retry loops.</li>
+            <li>Shipped production infrastructure with multi-stage Docker, Docker Compose, LangSmith observability, multi-provider LLM support, and 93 passing tests.</li>
           </ul>
           <div class="p-links">
             <a class="plink gh" href="https://github.com/TowhidAhmedd/agent-deepagent/tree/main" target="_blank" rel="noopener">
@@ -695,10 +695,10 @@ a{color:inherit}
         <div class="pbody">
           <div class="p-tech"><span class="ttag">LangGraph</span><span class="ttag">LangChain</span><span class="ttag">FastAPI</span><span class="ttag">APScheduler</span><span class="ttag">SQLite</span><span class="ttag">Docker</span><span class="ttag">Groq</span></div>
           <ul class="p-bullets">
-            <li>Built a fully automated AI news intelligence system using an <strong>8-node LangGraph multi-agent pipeline</strong> (Discovery → Extraction → Scoring → Dedup → Summarization → Ranking → Newsletter → Email) delivering formatted HTML briefings daily at 6:30 AM — 100% free-tier.</li>
-            <li>Engineered stateful async workflow with 8 independently error-resilient agents across <strong>18 RSS sources</strong>, using <strong>parallel batch scoring</strong> (5 articles/call, 3 parallel calls) to minimize latency and token costs.</li>
-            <li>Implemented <strong>two-stage deduplication</strong> (URL normalization + Jaccard title similarity) eliminating syndicated duplicates without LLM calls; built a provider-agnostic LLM factory (Groq/OpenRouter/Gemini) enabling zero-code switching.</li>
-            <li>Deployed via Docker Compose with APScheduler cron, FastAPI dashboard, LangSmith distributed tracing, and <strong>32/32 test coverage</strong> (unit, integration, end-to-end).</li>
+            <li>Built a fully automated AI news intelligence system using an 8-node LangGraph multi-agent pipeline (Discovery → Extraction → Scoring → Dedup → Summarization → Ranking → Newsletter → Email) delivering formatted HTML briefings daily at 6:30 AM — 100% free-tier.</li>
+            <li>Engineered stateful async workflow with 8 independently error-resilient agents across 18 RSS sources, using parallel batch scoring (5 articles/call, 3 parallel calls) to minimize latency and token costs.</li>
+            <li>Implemented two-stage deduplication< (URL normalization + Jaccard title similarity) eliminating syndicated duplicates without LLM calls; built a provider-agnostic LLM factory (Groq/OpenRouter/Gemini) enabling zero-code switching.</li>
+            <li>Deployed via Docker Compose with APScheduler cron, FastAPI dashboard, LangSmith distributed tracing, and 32/32 test coverage (unit, integration, end-to-end).</li>
           </ul>
           <div class="p-links">
             <a class="plink gh" href="https://github.com/TowhidAhmedd/agent-ai-news" target="_blank" rel="noopener">
@@ -718,10 +718,10 @@ a{color:inherit}
         <div class="pbody">
           <div class="p-tech"><span class="ttag">LangGraph</span><span class="ttag">FastAPI</span><span class="ttag">Groq</span><span class="ttag">Gmail API</span><span class="ttag">ChromaDB</span><span class="ttag">Streamlit</span><span class="ttag">Docker</span></div>
           <ul class="p-bullets">
-            <li>Architected a <strong>7-node LangGraph stateful pipeline</strong> (fetch → classify → context retrieval → draft → safety review → human approval → send) with a hard interrupt/resume mechanism — <strong>zero emails are ever sent without explicit human approval</strong>.</li>
-            <li>Engineered <strong>multi-layer HITL safety across three independent enforcement points</strong> (routing edge, node-level gate, API validation) so no single failure mode can bypass human control; LLM safety review agent scores drafts for hallucinations, incorrect promises, and sensitive data leakage.</li>
-            <li>Built a <strong>ChromaDB vector memory system</strong> retrieving semantically similar past threads, approved drafts, and company knowledge to generate context-aware, personalized replies via cosine similarity search.</li>
-            <li>Delivered full-stack Streamlit approval dashboard with inline draft editing, one-click approve/reject, risk score display, and agent analytics — <strong>80%+ test coverage</strong>.</li>
+            <li>Architected a 7-node LangGraph stateful pipeline (fetch → classify → context retrieval → draft → safety review → human approval → send) with a hard interrupt/resume mechanism — zero emails are ever sent without explicit human approval</strong>.</li>
+            <li>Engineered multi-layer HITL safety across three independent enforcement points (routing edge, node-level gate, API validation) so no single failure mode can bypass human control; LLM safety review agent scores drafts for hallucinations, incorrect promises, and sensitive data leakage.</li>
+            <li>Built a ChromaDB vector memory system retrieving semantically similar past threads, approved drafts, and company knowledge to generate context-aware, personalized replies via cosine similarity search.</li>
+            <li>Delivered full-stack Streamlit approval dashboard with inline draft editing, one-click approve/reject, risk score display, and agent analytics — 80%+ test coverage.</li>
           </ul>
           <div class="p-links">
             <a class="plink gh" href="https://github.com/TowhidAhmedd/agent-email-replay/tree/main" target="_blank" rel="noopener">
